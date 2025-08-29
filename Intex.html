@@ -15,8 +15,6 @@
   <meta property="og:locale" content="ko_KR" />
   <!-- sitemap.xml 및 robots.txt는 루트에 배치하세요 -->
 
-  <link rel="preload" as="image" href="/img.jpg" />
-
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -106,7 +104,8 @@
         </div>
         <div class="relative">
           <div class="aspect-[4/3] rounded-3xl border border-slate-200 dark:border-slate-800 shadow-soft bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-950 flex items-center justify-center">
-            <img src="/img.jpg" alt="Rim Hyunju 프로필 사진" class="w-full h-full object-cover rounded-3xl" loading="eager" decoding="async" fetchpriority="high" width="1200" height="900" />
+            <div class="text-center p-8">
+              <div class="text-6xl">🧑‍💻</div>
               <p class="mt-3 font-display text-lg">대표 이미지/사진</p>
               <p class="text-slate-500 dark:text-slate-400 text-sm">(프로필 사진이나 작업 스냅샷)</p>
             </div>
@@ -312,4 +311,3 @@
   </script>
 </body>
 </html>
-
