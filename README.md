@@ -1,0 +1,314 @@
+[Intex.html](https://github.com/user-attachments/files/22038789/Intex.html)
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rim Hyunju · 포트폴리오</title>
+  <meta name="description" content="Rim Hyunju의 포트폴리오 — 프로젝트, 경력, 기술 스택과 연락처" />
+  <link rel="canonical" href="https://your-domain.example/" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💼</text></svg>">
+  <meta property="og:title" content="Rim Hyunju · 포트폴리오" />
+  <meta property="og:description" content="프로젝트, 경력, 기술 스택과 연락처" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:locale" content="ko_KR" />
+  <!-- sitemap.xml 및 robots.txt는 루트에 배치하세요 -->
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["system-ui", "-apple-system", "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "sans-serif"],
+            body: ["system-ui", "-apple-system", "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "sans-serif"],
+          },
+          boxShadow: { soft: "0 8px 30px rgba(0,0,0,0.06)" },
+        },
+      },
+    };
+  </script>
+  <style>
+    ::selection { background: rgba(14,165,233,.25); }
+    html, body { height: 100%; }
+  </style>
+  <script>
+    // 다크모드 초기화 (시스템 선호 + 저장값)
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) document.documentElement.classList.add('dark');
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rim Hyunju",
+    "url": "https://your-domain.example",
+    "sameAs": ["https://github.com/your-id", "https://www.linkedin.com/in/your-id"],
+    "jobTitle": "프론트엔드 개발자",
+    "worksFor": {"@type": "Organization", "name": "—"}
+  }
+  </script>
+</head>
+<body class="font-body bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-sky-600 text-white px-3 py-2 rounded-lg">본문으로 건너뛰기</a>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur border-b border-slate-200/60 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="font-display text-lg font-semibold tracking-tight">Rim Hyunju</a>
+      <ul class="hidden md:flex gap-6 text-sm">
+        <li><a href="#about" class="hover:text-sky-600">소개</a></li>
+        <li><a href="#skills" class="hover:text-sky-600">기술</a></li>
+        <li><a href="#projects" class="hover:text-sky-600">프로젝트</a></li>
+        <li><a href="#experience" class="hover:text-sky-600">경력</a></li>
+        <li><a href="#contact" class="hover:text-sky-600">연락</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="rounded-xl border border-slate-200 dark:border-slate-800 px-3 py-1.5 text-xs hover:shadow-soft" aria-label="색상 모드 전환">🌙</button>
+        <a href="/resume.pdf" data-umami-event="resume_download" class="hidden sm:inline-block bg-sky-600 hover:bg-sky-700 text-white text-xs font-medium px-3 py-2 rounded-xl shadow-soft">Resume</a>
+        <button class="md:hidden p-2" id="menuBtn" aria-label="메뉴 열기">☰</button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <ul class="max-w-6xl mx-auto px-4 py-2 grid gap-2 text-sm">
+        <li><a class="block py-2" href="#about">소개</a></li>
+        <li><a class="block py-2" href="#skills">기술</a></li>
+        <li><a class="block py-2" href="#projects">프로젝트</a></li>
+        <li><a class="block py-2" href="#experience">경력</a></li>
+        <li><a class="block py-2" href="#contact">연락</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight tracking-tight">안녕하세요, <span class="text-sky-600">Rim Hyunju</span>입니다.<br/>사용자를 사로잡는 인터페이스를 만듭니다.</h1>
+          <p class="mt-5 text-slate-600 dark:text-slate-300">정적 HTML을 기반으로 가볍고 빠른 포트폴리오. 가독성과 접근성을 최우선으로 설계했습니다.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-3 rounded-xl shadow-soft text-sm font-medium">프로젝트 보기</a>
+            <a href="/resume.pdf" class="border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 px-5 py-3 rounded-xl text-sm font-medium" data-umami-event="resume_download">이력서 다운로드</a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm">
+            <a class="underline-offset-4 hover:underline" href="https://github.com/your-id" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="underline-offset-4 hover:underline" href="https://linkedin.com/in/your-id" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="underline-offset-4 hover:underline" href="mailto:you@example.com" data-umami-event="email_click">Email</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl border border-slate-200 dark:border-slate-800 shadow-soft bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-950 flex items-center justify-center">
+            <div class="text-center p-8">
+              <div class="text-6xl">🧑‍💻</div>
+              <p class="mt-3 font-display text-lg">대표 이미지/사진</p>
+              <p class="text-slate-500 dark:text-slate-400 text-sm">(프로필 사진이나 작업 스냅샷)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 md:py-24 border-t border-slate-100 dark:border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-2xl md:text-3xl font-semibold">소개</h2>
+        <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+          프론트엔드 중심의 풀스택 역량으로 문제를 정의하고 빠르게 실험해 비즈니스 임팩트를 만듭니다.
+          정적 HTML + Tailwind 조합으로 성능과 유지보수성을 확보하며, GitHub Pages로 간단하게 배포/운영합니다.
+        </p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-300">
+          <li>• 서울, 대한민국</li>
+          <li>• 관심사: DX, 접근성(A11y), 웹 성능</li>
+          <li>• 이메일: you@example.com</li>
+          <li>• 오픈소스: your-id/your-repo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-2xl md: text-3xl font-semibold">기술</h2>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-full text-sm border border-slate-200 dark:border-slate-800">HTML</span>
+          <span class="px-3 py-1.5 rounded-full text-sm border border-slate-200 dark:border-slate-800">Tailwind CSS</span>
+          <span class="px-3 py-1.5 rounded-full text-sm border border-slate-200 dark:border-slate-800">Vanilla JS</span>
+          <span class="px-3 py-1.5 rounded-full text-sm border border-slate-200 dark:border-slate-800">GitHub Pages</span>
+          <span class="px-3 py-1.5 rounded-full text-sm border border-slate-200 dark:border-slate-800">SEO / OG</span>
+          <span class="px-3 py-1.5 rounded-full text-sm border border-slate-200 dark:border-slate-800">Accessibility</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/40 border-y border-slate-100 dark:border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-display text-2xl md:text-3xl font-semibold">대표 프로젝트</h2>
+          <a href="#" class="text-sm underline underline-offset-4">전체 보기</a>
+        </div>
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project Card template -->
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 hover:shadow-soft transition">
+            <div class="aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-900 dark:to-slate-950 grid place-items-center">
+              <span class="text-4xl">📱</span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-semibold text-lg">프로젝트 A — 전자상거래 프론트</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">정적 자산 최적화로 LCP 3.5s → 1.9s, 장바구니 전환율 +18%.</p>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+                <li class="px-2 py-1 rounded-full border">HTML</li>
+                <li class="px-2 py-1 rounded-full border">Tailwind</li>
+                <li class="px-2 py-1 rounded-full border">JS</li>
+              </ul>
+              <div class="mt-4 flex gap-3 text-sm">
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer">라이브</a>
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer" data-umami-event="case_open">케이스 스터디</a>
+              </div>
+            </div>
+          </article>
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 hover:shadow-soft transition">
+            <div class="aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-900 dark:to-slate-950 grid place-items-center">
+              <span class="text-4xl">🤖</span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-semibold text-lg">프로젝트 B — 검색 랭킹 개선</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">NDCG@10 0.21 → 0.35, 클릭률 +12%.</p>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+                <li class="px-2 py-1 rounded-full border">HTML</li>
+                <li class="px-2 py-1 rounded-full border">Tailwind</li>
+                <li class="px-2 py-1 rounded-full border">JS</li>
+              </ul>
+              <div class="mt-4 flex gap-3 text-sm">
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer">라이브</a>
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 hover:shadow-soft transition">
+            <div class="aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-900 dark:to-slate-950 grid place-items-center">
+              <span class="text-4xl">📊</span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-semibold text-lg">프로젝트 C — 데이터 대시보드</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">KPI 모니터링 자동화, 알림 지연 40% ↓.</p>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+                <li class="px-2 py-1 rounded-full border">HTML</li>
+                <li class="px-2 py-1 rounded-full border">Tailwind</li>
+                <li class="px-2 py-1 rounded-full border">JS</li>
+              </ul>
+              <div class="mt-4 flex gap-3 text-sm">
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer">라이브</a>
+                <a class="underline underline-offset-4" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-2xl md:text-3xl font-semibold">경력</h2>
+        <ol class="mt-6 relative border-s border-slate-200 dark:border-slate-800">
+          <li class="ms-6 py-5">
+            <span class="absolute -start-1.5 mt-2 h-3 w-3 rounded-full bg-sky-500"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-semibold">시니어 프론트엔드 개발자 · ABC Corp</h3>
+              <time class="text-sm text-slate-500 dark:text-slate-400">2023.03 — 현재</time>
+            </div>
+            <ul class="list-disc ms-5 mt-2 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              <li>디자인 시스템 구축(컴포넌트 40+), 재사용률 65%</li>
+              <li>이미지 최적화/코드 스플리팅으로 LCP 45% 개선</li>
+            </ul>
+          </li>
+          <li class="ms-6 py-5">
+            <span class="absolute -start-1.5 mt-2 h-3 w-3 rounded-full bg-sky-500"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-semibold">프론트엔드 개발자 · XYZ Studio</h3>
+              <time class="text-sm text-slate-500 dark:text-slate-400">2020.07 — 2023.02</time>
+            </div>
+            <ul class="list-disc ms-5 mt-2 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              <li>CSR → SSG 전환, SEO 클릭수 2.1배</li>
+              <li>접근성 100점 달성(Lighthouse)</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 md:py-24 border-t border-slate-100 dark:border-slate-800">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-2xl md:text-3xl font-semibold">연락하기</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">협업 제안이나 문의는 아래 폼 또는 <a class="underline" href="mailto:you@example.com" data-umami-event="email_click">you@example.com</a> 으로 보내주세요.</p>
+        <form class="mt-6 grid gap-4" onsubmit="handleSubmit(event)">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="grid gap-1 text-sm">이름
+              <input type="text" name="name" required class="mt-1 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500" />
+            </label>
+            <label class="grid gap-1 text-sm">이메일
+              <input type="email" name="email" required class="mt-1 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500" />
+            </label>
+          </div>
+          <label class="grid gap-1 text-sm">메시지
+            <textarea name="message" rows="5" required class="mt-1 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+          </label>
+          <div class="flex items-center justify-between gap-4">
+            <label class="inline-flex items-center gap-2 text-xs text-slate-500">
+              <input type="checkbox" required class="rounded" /> 개인정보 제공에 동의합니다.
+            </label>
+            <button type="submit" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 rounded-xl shadow-soft text-sm" data-umami-event="contact_submit">보내기</button>
+          </div>
+          <p id="formResult" class="text-sm"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-sm text-slate-500 dark:text-slate-400">
+    © <span id="year"></span> Rim Hyunju. All rights reserved.
+  </footer>
+
+  <script>
+    // 모바일 메뉴 토글
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // 다크모드 토글
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const root = document.documentElement;
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // 연락 폼 mailto 처리 (기본)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const name = encodeURIComponent(data.get('name'));
+      const email = encodeURIComponent(data.get('email'));
+      const message = encodeURIComponent(data.get('message'));
+      const body = `보낸이: ${name}%0A이메일: ${email}%0A%0A${message}`;
+      window.location.href = `mailto:you@example.com?subject=%5B포트폴리오%5D%20문의&body=${body}`;
+      document.getElementById('formResult').textContent = '메일 클라이언트를 여는 중입니다…';
+    }
+
+    // 연도 자동
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // (선택) Umami/GA4 스니펫은 아래에 삽입
+    // <script async src="https://umami.example/script.js" data-website-id="..."><\/script>
+  </script>
+</body>
+</html>
